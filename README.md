@@ -1,59 +1,64 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Kakeibo - The Japanese Art of Household Budgeting 💴
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Kakeibo** (家計簿) is the art of mindful money management. This application helps you apply the _Kakeibo_ method to track every expense, evaluate your spending habits, and achieve your savings goals with discipline.
 
-## About Laravel
+## 💡 Core Concepts
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This application is designed around the four key _Kakeibo_ questions:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. **How much money do I have?**
+2. **How much do I want to save?**
+3. **How much have I spent?**
+4. **How can I improve?**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Tech Stack
 
-## Learning Laravel
+- **Framework:** Laravel 10/11
+- **Language:** PHP 8.2+
+- **Frontend:** Tailwind CSS & Vite
+- **Database:** MySQL
+- **Version Control:** Git
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 📋 Key Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Manual Recording:** Input transactions using specific Kakeibo categories (_Survival, Optional, Culture, Extra_).
+- **Monthly Reflection:** End-of-month summaries to evaluate your spending habits.
+- **Savings Goals:** Track your savings progress against your set targets.
 
-## Laravel Sponsors
+## 📈 How to Use
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. **Set Your Budget: Input your monthly income at the beginning of the month.**
+2. **Record Expenses: Log expenses as they happen (using the manual/mindful method).**
+3. **Evaluate: At the end of the month, open the "Reflection" dashboard to review your spending categories.**
 
-### Premium Partners
+## 🏆 Credits
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+This project was developed with inspiration and support from **Rexilliant.** Thank you for the contributions and creative ideas that helped shape the workflow and development of this application.
 
-## Contributing
+## 🤝 Contributions
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+If you would like to add analysis features or more in-depth statistical visualizations, please fork the repository and submit a pull request.
 
-## Code of Conduct
+## 🚀 Installation
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Run the following commands in your terminal:
 
-## Security Vulnerabilities
+```bash
+# 1. Clone the repository
+git clone [your-repo-link]
+cd kakeibo-app
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# 2. Install dependencies
+composer install
+npm install
 
-## License
+# 3. Configure Environment
+cp .env.example .env
+php artisan key:generate
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# 4. Database Migration (Don't forget to set up your DB in .env first)
+php artisan migrate
+
+# 5. Run the Application
+npm run dev & php artisan serve
+```
