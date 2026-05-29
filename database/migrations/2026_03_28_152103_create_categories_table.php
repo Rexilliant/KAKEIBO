@@ -1,0 +1,30 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration {
+    public function up(): void
+    {
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+
+            $table->string('name');
+            $table->enum('transaction_type', ['income', 'expense']);
+            $table->enum('kakeibo_type', ['needs', 'wants', 'culture', 'unexpected', 'income'])->default('income');
+
+            $table->string('icon')->nullable();
+            $table->string('color', 20)->nullable();
+            $table->boolean('is_active')->default(true);
+
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('categories');
+    }
+};
